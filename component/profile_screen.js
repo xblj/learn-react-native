@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Image, CheckBox, View, Button, StyleSheet, TextInput } from 'react-native';
+import FadeInView from './animated';
 export class ProfileScreen extends Component {
   constructor() {
     super();
@@ -34,7 +35,9 @@ export class ProfileScreen extends Component {
             .join('')}
         </Text>
         <Text style={styles.red}>{text}</Text>
-        <Button onPress={this.onPressLearnMore} title="Learn More" color="red" accessibilityLabel="Learn more about this purple button" />
+        <FadeInView>
+          <Button onPress={this.onPressLearnMore} title="Learn More" color="red" accessibilityLabel="Learn more about this purple button" />
+        </FadeInView>
         <Image source={pic} style={{ width: 193, height: 110 }} />
         {/* <MyComponent label="mylabe"></MyComponent> */}
       </View>
