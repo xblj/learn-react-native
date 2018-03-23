@@ -14,7 +14,7 @@ export class MainScreen extends Component {
         />
         <TouchableNativeFeedback>
           <View>
-            <Text>点我看看呢</Text>
+            <Text>萨撒热完全</Text>
             </View>
         </TouchableNativeFeedback>
       </View>
