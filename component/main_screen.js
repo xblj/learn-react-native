@@ -12,6 +12,14 @@ export class MainScreen extends Component {
           title="Go to Jane's profile"
           onPress={() =>navigate('Profile', { name: 'Jane' })}
         />
+        <Button
+          title="MyView"
+          onPress={() =>navigate('MyView', { name: 'myView' })}
+        />
+        <Button
+          title="MyNavigation"
+          onPress={() =>navigate('MyNavigation', { title: 'MyNavigation' })}
+        />
         <TouchableNativeFeedback>
           <View>
             <Text>萨撒热完全</Text>
