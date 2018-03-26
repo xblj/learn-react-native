@@ -4,18 +4,19 @@ import { StackNavigator } from 'react-navigation';
 import { ProfileScreen } from './component/profile_screen';
 import { MainScreen } from './component/main_screen';
 import { MyView } from './component/View';
-import { MyNavigation } from './component/navigation';
+// 导航
+import { MyNavigation } from './component/navigation/navigation';
+import { AddButton } from './component/navigation/AddButton';
+import { ModalScreen } from './component/navigation/ModalScreen';
 
 export default StackNavigator(
   {
     Main: { screen: MainScreen },
     Profile: { screen: ProfileScreen },
-    MyView: {
-      screen: MyView
-    },
-    MyNavigation: {
-      screen: MyNavigation
-    }
+    MyView: { screen: MyView },
+    MyNavigation: { screen: MyNavigation },
+    AddButton: { screen: AddButton },
+    ModalScreen: { screen: ModalScreen }
   },
   {
     initialRouteName: 'Main',

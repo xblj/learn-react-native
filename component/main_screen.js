@@ -20,6 +20,14 @@ export class MainScreen extends Component {
           title="MyNavigation"
           onPress={() =>navigate('MyNavigation', { title: 'MyNavigation' })}
         />
+        <Button
+          title="导航交互"
+          onPress={() =>navigate('AddButton', { title: 'AddButton' })}
+        />
+        <Button
+          title="模态框"
+          onPress={() =>navigate('ModalScreen', { title: 'ModalScreen' })}
+        />
         <TouchableNativeFeedback>
           <View>
             <Text>萨撒热完全</Text>
