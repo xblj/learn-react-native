@@ -8,6 +8,7 @@ import { MyView } from './component/View';
 import { MyNavigation } from './component/navigation/navigation';
 import { AddButton } from './component/navigation/AddButton';
 import { ModalScreen } from './component/navigation/ModalScreen';
+import { MyWebView, myWebView } from './component/WebView';
 
 export default StackNavigator(
   {
@@ -16,7 +17,8 @@ export default StackNavigator(
     MyView: { screen: MyView },
     MyNavigation: { screen: MyNavigation },
     AddButton: { screen: AddButton },
-    ModalScreen: { screen: ModalScreen }
+    ModalScreen: { screen: ModalScreen },
+    MyWebView: { screen: myWebView }
   },
   {
     initialRouteName: 'Main',

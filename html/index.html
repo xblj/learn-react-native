@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #editor {
+            border: 1px solid #000;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>111111144444ddfgf1</div>
+    <div id="editor" contenteditable="true">
+        dsafdsafdsas43242
+    </div>
+    <button onClick="changeColor()">黄色</button>
+    <button onClick="h1()">h1</button>
+    <button onClick="redo()">redo</button>
+    <button onClick="undo()">redo</button>
+    <button onClick="selection()">selection</button>
+    <button onClick="addRange()">addRange</button>
+    <button onClick="range()">range</button>
+    <SCript>
+        function changeColor() {
+            document.execCommand('forecolor', false, 'red');
+        }
+        function h1() {
+            document.execCommand('insertHtml', false, '<h1 id="h1"></h1>');
+            let myrange = new Range();
+            setTimeout(() => {
+                var h1 = document.getElementById('h1');
+                console.log(h1);
+                myrange.setStart(h1, 0);
+            })
+        }
+        function redo() {
+            console.log(21);
+            document.execCommand('redo', false, null);
+        }
+        function undo() {
+            console.log(21);
+            document.execCommand('undo', false, null);
+        }
+        function selection() {
+            let sel = document.getSelection();
+            console.log(sel);
+        }
+        function addRange() {
+            let sel = document.getSelection();
+            sel.addRange(1, 2);
+        }
+        function range() {
+            let myrange = new Range();
+            console.log(myrange);
+        }
+    </SCript>
+</body>
+
+</html>

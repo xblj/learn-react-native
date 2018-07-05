@@ -28,9 +28,13 @@ export class MainScreen extends Component {
           title="模态框"
           onPress={() =>navigate('ModalScreen', { title: 'ModalScreen' })}
         />
+        <Button
+          title="WebView"
+          onPress={() =>navigate('MyWebView', { title: 'WebView' })}
+        />
         <TouchableNativeFeedback>
           <View>
-            <Text>萨撒热完全</Text>
+            <Text></Text>
             </View>
         </TouchableNativeFeedback>
       </View>
