@@ -32,6 +32,10 @@ export class MainScreen extends Component {
           title="WebView"
           onPress={() =>navigate('MyWebView', { title: 'WebView' })}
         />
+        <Button
+          title="FlatList"
+          onPress={() =>navigate('FlatList', { title: 'FlatList' })}
+        />
         <TouchableNativeFeedback>
           <View>
             <Text></Text>
