@@ -6,7 +6,7 @@ import store from './src/redux';
 
 import { ProfileScreen } from './component/profile_screen';
 import { MainScreen } from './src/main_screen';
-import { MyView } from './component/View';
+import MyView from './component/View';
 // 导航
 import { MyNavigation } from './component/navigation/navigation';
 import { AddButton } from './component/navigation/AddButton';

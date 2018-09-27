@@ -20,7 +20,7 @@ export class MainScreen extends Component {
         />
         <Button
           title="MyView"
-          onPress={() =>navigate('MyView', { name: 'myView' })}
+          onPress={() =>navigate('MyView', { name: 'myView', id: 1 })}
         />
         <Button
           title="MyNavigation"

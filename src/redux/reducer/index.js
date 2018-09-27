@@ -1,11 +1,18 @@
 // import { getReducers } from '../../utils'
 import { combineReducers } from 'redux';
+// import {
+//   postsBySubreddit,
+//   selectedsubreddit
+// } from './thunk';
+
+import { myView } from './myView';
 import {
   ADD_TODO,
   TOGGLE_TODO,
   SET_VISIBILITY_FILTER,
   VisibilityFilters
 } from '../actions'
+
 
 const { SHOW_ALL } = VisibilityFilters;
 
@@ -31,7 +38,7 @@ function todos(state = [], action) {
       ];
     case TOGGLE_TODO:
       return state.map((todo) => {
-        if(todo.key === action.key) {
+        if (todo.key === action.key) {
           return Object.assign({}, todo, {
             completed: !todo.completed
           });
@@ -39,11 +46,14 @@ function todos(state = [], action) {
         return todo;
       });
     default:
-    return state;
+      return state;
   }
 }
 
 export default combineReducers({
   visibilityFilter,
-  todos
+  todos,
+  myView,
+  // postsBySubreddit,
+  // selectedsubreddit
 });
