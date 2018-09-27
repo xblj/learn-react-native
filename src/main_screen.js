@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import { Text, Image, CheckBox, View, Button, StyleSheet, TextInput, TouchableNativeFeedback } from 'react-native';
+import { Text, Image, CheckBox, View, Button, StyleSheet, TextInput, TouchableHighlight } from 'react-native';
 export class MainScreen extends Component {
   static navigationOptions = {
     title: 'Welcome',
   };
+
+  componentDidMount = () => {
+    console.log(this.props);
+  }
+  
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -36,11 +42,14 @@ export class MainScreen extends Component {
           title="FlatList"
           onPress={() =>navigate('FlatList', { title: 'FlatList' })}
         />
-        <TouchableNativeFeedback>
-          <View>
-            <Text></Text>
-            </View>
-        </TouchableNativeFeedback>
+        <Button
+          title="NestedScroll"
+          onPress={() =>navigate('NestedScroll')}
+        />
+        <Button
+          title="Todo"
+          onPress={() =>navigate('Todo')}
+        />
       </View>
     );
   }
