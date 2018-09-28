@@ -5,11 +5,6 @@ export class MainScreen extends Component {
     title: 'Welcome',
   };
 
-  componentDidMount = () => {
-    console.log(this.props);
-  }
-  
-
   render() {
     const { navigate } = this.props.navigation;
     return (

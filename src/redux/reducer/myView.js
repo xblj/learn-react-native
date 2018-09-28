@@ -6,10 +6,9 @@ function changeData(store, data) {
   return Object.assign({}, store, { [curId]: newPageData })
 }
 
-function setRequestStatus(store, status) {
-  const { curId } = store;
-  const newPageData = { ...store[curId], requestStatus: status };
-  return Object.assign({}, store, { [curId]: newPageData });
+function setRequestStatus(store, {id, status}) {
+  const newPageData = { ...store[id], requestStatus: status };
+  return Object.assign({}, store, { [id]: newPageData });
 }
 
 export function myView(state = {}, action) {
@@ -21,7 +20,7 @@ export function myView(state = {}, action) {
     case SET_CUR_ID:
       return Object.assign({}, state, { curId: action.id });
     case SET_REQUEST:
-      return setRequestStatus(state, action.status);
+      return setRequestStatus(state, action);
     default:
       return state;
   }
