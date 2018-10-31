@@ -11,39 +11,43 @@ export class MainScreen extends Component {
       <View>
         <Button
           title="Go to Jane's profile"
-          onPress={() =>navigate('Profile', { name: 'Jane' })}
+          onPress={() => navigate('Profile', { name: 'Jane' })}
         />
         <Button
           title="MyView"
-          onPress={() =>navigate('MyView', { name: 'myView', id: 1 })}
+          onPress={() => navigate('MyView', { name: 'myView', id: 1 })}
         />
         <Button
           title="MyNavigation"
-          onPress={() =>navigate('MyNavigation', { title: 'MyNavigation' })}
+          onPress={() => navigate('MyNavigation', { title: 'MyNavigation' })}
         />
         <Button
           title="导航交互"
-          onPress={() =>navigate('AddButton', { title: 'AddButton' })}
+          onPress={() => navigate('AddButton', { title: 'AddButton' })}
         />
         <Button
           title="模态框"
-          onPress={() =>navigate('ModalScreen', { title: 'ModalScreen' })}
+          onPress={() => navigate('ModalScreen', { title: 'ModalScreen' })}
         />
         <Button
           title="WebView"
-          onPress={() =>navigate('MyWebView', { title: 'WebView' })}
+          onPress={() => navigate('MyWebView', { title: 'WebView' })}
         />
         <Button
           title="FlatList"
-          onPress={() =>navigate('FlatList', { title: 'FlatList' })}
+          onPress={() => navigate('FlatList', { title: 'FlatList' })}
         />
         <Button
           title="NestedScroll"
-          onPress={() =>navigate('NestedScroll')}
+          onPress={() => navigate('NestedScroll')}
         />
         <Button
           title="Todo"
-          onPress={() =>navigate('Todo')}
+          onPress={() => navigate('Todo')}
+        />
+        <Button
+          title="PageScroll"
+          onPress={() => navigate({ routeName: 'PageScroll', params: { id: 1 } })}
         />
       </View>
     );

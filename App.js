@@ -15,6 +15,7 @@ import { MyWebView, myWebView } from './component/WebView';
 import { TestFlatList } from './src/screens/FlatList';
 import NestedScroll from './src/screens/NestedScroll';
 import Todo from './src/screens/Todo';
+import PageScroll from './src/screens/PageScroll';
 
 const Navigator = StackNavigator(
   {
@@ -27,6 +28,7 @@ const Navigator = StackNavigator(
     MyWebView: { screen: myWebView },
     FlatList: { screen: TestFlatList },
     NestedScroll: { screen: NestedScroll },
+    PageScroll,
     Todo
   },
   {
